@@ -1,40 +1,37 @@
 const projects = [
-  {
-    title: "Branding en concept",
-    description:
-      "Werk waarin visuele identiteit, verhaal en vorm samenkomen."
-  },
-  {
-    title: "Creatieve websites",
-    description:
-      "Digitale ervaringen met aandacht voor sfeer, ritme en gebruiksgemak."
-  },
-  {
-    title: "Experimenten",
-    description:
-      "Kleine studies, prototypes en visuele onderzoeken in ontwikkeling."
-  }
+  'Art & Design',
+  'Bilal Wahib Paradiso',
+  'SprinterSoundSystem',
+  'TurnDownForWhat',
+  'MocHar'
 ];
 
 export default function Home() {
   return (
     <main className="page">
-      <section className="hero" aria-labelledby="intro-title">
-        <p className="eyebrow">HKU Portfolio</p>
-        <h1 id="intro-title">Joep Cuypers</h1>
-        <p className="intro">
-          Een eerste basis voor mijn toelatingsportfolio: rustig, persoonlijk en
-          klaar om stap voor stap uit te bouwen met projecten, beeld en verhaal.
-        </p>
+      <section className="hero">
+        <p>Portfolio 2026</p>
+        <h1>Joep Cuypers</h1>
+        <p>Graphic designer, art director and creative developer.</p>
       </section>
 
-      <section className="grid" aria-label="Portfolio onderdelen">
+      <section>
+        <h2>Selected Work</h2>
         {projects.map((project) => (
-          <article className="card" key={project.title}>
-            <h2>{project.title}</h2>
-            <p>{project.description}</p>
+          <article key={project}>
+            <h3>{project}</h3>
           </article>
         ))}
+      </section>
+
+      <section>
+        <h2>About</h2>
+        <p>Designing visual systems for temporary worlds.</p>
+      </section>
+
+      <section>
+        <h2>Contact</h2>
+        <p>Available for freelance and collaborative projects.</p>
       </section>
     </main>
   );
